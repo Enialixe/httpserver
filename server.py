@@ -56,7 +56,7 @@ class HTTPServer(object):
                 client.settimeout(60)
             logging.info('Recieved connction from {address}'.format(address=address))
             self.queue.put((client, address))
-            
+
     def __proceed_sessions(self, queue):
         packet_size = 1024
         while True:
