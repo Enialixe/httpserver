@@ -14,7 +14,7 @@ def quitServer(sig, unused):
 
 def init_logger():
     log_path = os.path.join(script_dir, 'server.log')
-    logging.basicConfig(filename=log_path, level=logging.DEBUG,
+    logging.basicConfig(filename=log_path, level=logging.ERROR,
                         format='[%(asctime)s] %(levelname).1s %(message)s',
                         datefmt='%Y.%m.%d %H:%M:%S')
     logging.info('Loggin is started')
